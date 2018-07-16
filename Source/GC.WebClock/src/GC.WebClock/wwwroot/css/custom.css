@@ -1,0 +1,921 @@
+
+@media(max-width:768px) {
+    .brandLogo img {
+        height: 35px;
+        margin-top: 7px;
+    }
+}
+
+@media(min-width:768px) {
+    #page-wrapper {
+        position: inherit;
+        margin: 0 0 0 250px;
+    }
+
+    .sidebar {
+        z-index: 1;
+        position: absolute;
+        width: 250px;
+    }
+
+    .navbar-top-links .dropdown-messages,
+    .navbar-top-links .dropdown-tasks,
+    .navbar-top-links .dropdown-alerts {
+        margin-left: auto;
+    }
+}
+
+@media(min-width:768px) {
+    .col-md-1 {
+        float: left;
+        width: 8.33333333%;
+    }
+
+    .col-md-2 {
+        float: left;
+        width: 16.66666667%;
+    }
+
+    .col-md-3 {
+        float: left;
+        width: 25%;
+    }
+
+    .col-md-4 {
+        float: left;
+        width: 33.33333333%;
+    }
+
+    .col-md-5 {
+        float: left;
+        width: 41.66666667%;
+    }
+
+    .col-md-6 {
+        float: left;
+        width: 50%;
+    }
+
+    .col-md-7 {
+        float: left;
+        width: 58.33333333%;
+    }
+
+    .col-md-8 {
+        float: left;
+        width: 66.66666667%;
+    }
+
+    .col-md-9 {
+        float: left;
+        width: 75%;
+    }
+
+    .col-md-10 {
+        float: left;
+        width: 83.33333333%;
+    }
+
+    .col-md-11 {
+        float: left;
+        width: 91.66666667%;
+    }
+
+    .col-md-12 {
+        float: left;
+        width: 100%;
+    }
+}
+
+#wrapper {
+    width: 100%;
+}
+
+#page-wrapper {
+    /*--padding: 0 15px;--*/
+    min-height: 568px;
+}
+
+.navbar-top-links {
+    margin-right: 0;
+}
+
+    .navbar-top-links li {
+        display: inline-block;
+    }
+
+        .navbar-top-links li:last-child {
+            margin-right: 15px;
+        }
+
+        .navbar-top-links li a {
+            padding: 15px;
+        }
+
+    .navbar-top-links .dropdown-menu li {
+        display: block;
+    }
+
+        .navbar-top-links .dropdown-menu li:last-child {
+            margin-right: 0;
+        }
+
+        .navbar-top-links .dropdown-menu li a {
+            padding: 3px 20px;
+            min-height: 0;
+        }
+
+            .navbar-top-links .dropdown-menu li a div {
+                white-space: normal;
+            }
+
+    .navbar-top-links .dropdown-messages,
+    .navbar-top-links .dropdown-tasks,
+    .navbar-top-links .dropdown-alerts {
+        width: 310px;
+        min-width: 0;
+    }
+
+    .navbar-top-links .dropdown-messages {
+        margin-left: 5px;
+    }
+
+    .navbar-top-links .dropdown-tasks {
+        margin-left: -59px;
+    }
+
+    .navbar-top-links .dropdown-alerts {
+        margin-left: -123px;
+    }
+
+    .navbar-top-links .dropdown-user {
+        right: 0;
+        left: auto;
+    }
+
+.sidebar .sidebar-nav.navbar-collapse {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.sidebar .sidebar-search {
+    padding: 15px;
+}
+
+.sidebar .arrow {
+    float: right;
+}
+
+.sidebar .fa.arrow:before {
+    content: "\f104";
+    font-weight: bold;
+}
+
+.sidebar .active > a > .fa.arrow:before {
+    content: "\f107";
+    font-weight: bold;
+}
+
+.sidebar .nav-second-level li,
+.sidebar .nav-third-level li {
+    border-bottom: 0 !important;
+}
+
+    .sidebar .nav-second-level li.childactive,
+    .sidebar .nav-third-level li.childactive {
+        background: #D93A2F;
+    }
+
+    .sidebar .nav-third-level li a {
+        padding-left: 52px;
+    }
+
+.gcbrand {
+    color: #fff;
+    background: #fff url("../images/gc_brand_small.png") no-repeat center center;
+}
+
+.mfbrand {
+    color: #fff;
+    background: #fff url("../images/mf_brand_small.png") no-repeat center center;
+}
+
+.wwbwbrand {
+    color: #fff;
+    background: #fff url("../images/wwbw_brand_small.png") no-repeat center center;
+}
+
+#loginview span {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+}
+
+#loginview select {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    height: 26px;
+    width: 100%;
+}
+
+#loginview input {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    height: 26px;
+    padding: 6px 5px;
+    width: 100%;
+}
+
+#newapplication .nav > li > a {
+    font-weight: 500;
+    padding: 10px 15px 10px 15px;
+    font-size: 14px;
+    margin: 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+#newapplication .nav-tabs > li.active > a, #newapplication .nav-tabs > li.active > a:focus, #newapplication .nav-tabs > li.active > a:hover {
+    border: 1px solid #D93A2F;
+    border-bottom: 1px solid #ddd;
+}
+
+#newapplication span {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+}
+
+#newapplication select {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    min-height: 24px;
+    width: 100%;
+}
+
+#newapplication a {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+}
+
+#newapplication input {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    width: 100%;
+}
+
+    #newapplication input[type=radio] {
+        width: auto;
+    }
+
+    #newapplication input[type=checkbox] {
+        width: auto;
+        margin: 0px;
+    }
+
+#AccountInformationLookup span {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+}
+
+#AccountInformationLookup select {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    min-height: 24px;
+    width: 100%;
+}
+
+#AccountInformationLookup input {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    width: 100%;
+}
+
+#AccountInformationLookup input[type=radio] {
+        width: auto;
+}
+
+#appstatus span {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+}
+
+#appstatus select {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    min-height: 24px;
+    width: 100%;
+}
+
+#appstatus input {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    width: 100%;
+}
+
+#opentoBuy span {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+}
+
+#opentoBuy select {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    min-height: 24px;
+    width: 100%;
+}
+
+#opentoBuy input {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    width: 100%;
+}
+
+
+#appsummary span {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+}
+
+#appsummary select {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    min-height: 24px;
+    width: 100%;
+}
+
+#appsummary input {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    width: 100%;
+}
+
+
+#CreditLimitIncrease span {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+}
+
+#CreditLimitIncrease select {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    min-height: 24px;
+    width: 100%;
+}
+
+#CreditLimitIncrease input {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    width: 100%;
+}
+
+#AudtiLogging .nav > li > a {
+    font-weight: 500;
+    padding: 10px 15px 10px 15px;
+    font-size: 14px;
+    margin: 0px;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+}
+
+#AudtiLogging .nav-tabs > li.active > a, #newapplication .nav-tabs > li.active > a:focus, #newapplication .nav-tabs > li.active > a:hover {
+    border: 1px solid #D93A2F;
+    border-bottom: 1px solid #ddd;
+}
+
+#FortivaAccountLookup span {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+}
+
+#FortivaAccountLookup select {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    min-height: 24px;
+    width: 100%;
+}
+
+#FortivaAccountLookup input {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    width: 100%;
+}
+
+#acceptOffer span {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+}
+
+#acceptOffer select {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    min-height: 24px;
+    width: 100%;
+}
+
+#acceptOffer input {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    width: 100%;
+}
+
+    #acceptOffer input[type=radio] {
+        width: auto !important;
+    }
+
+#LegalDocument span {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+}
+
+#LegalDocument select {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    min-height: 24px;
+    width: 100%;
+}
+
+#LegalDocument input {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    width: 100%;
+}
+
+/*To change behaviour of Logo */
+
+.navbar-default .navbar-brand:focus {
+    background: #fff url("../images/gc_logo04_alt.png") no-repeat center center;
+}
+
+/*To increase distance between two bootstrap rows*/
+.row {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.blue {
+    color: rgb(59, 115, 185);
+}
+
+.green {
+    color: rgb(118, 185, 0);
+}
+
+.orange {
+    color: #ed8000;
+}
+
+.red {
+    color: #D93A2F;
+}
+/*Styling of Phone number fields*/
+.phone1 {
+    width: 20%;
+}
+
+.phone2 {
+    width: 25%;
+}
+
+.dateSM {
+    width: 20%;
+}
+
+.dateLG {
+    width: 25%;
+}
+
+/*CSS for styling of tabs*/
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}
+
+form.tab-form-demo .tab-pane {
+    margin: 20px 20px;
+}
+
+/*CSS for tooltip*/
+.tooltip-inner {
+    display: inline-block !important;
+    max-width: 400px !important;
+    background-color: #E16159;
+}
+
+.tooltip {
+    min-width: 200px !important;
+}
+
+    .tooltip.right .tooltip-arrow {
+        border-right-color: #E16159;
+    }
+
+/*To override with of radio buttons*/
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-top: 1px solid #ddd;
+}
+
+.radio-button-width {
+    width: auto !important;
+}
+
+.btn {
+    margin-bottom: 2px !important;
+}
+
+.loader-style {
+    display: inline;
+}
+
+.checkbox-inline, .radio-inline {
+    padding-left: 30px;
+    font-size: 13px;
+}
+
+
+    .checkbox-inline + .checkbox-inline, .radio-inline + .radio-inline {
+        margin-left: 1px;
+    }
+
+.telesales-radio-inline {
+    padding-left: 20px !important;
+    font-size: 13px;
+}
+
+    .telesales-radio-inline + .telesales-radio-inline {
+        margin-left: 15px !important;
+    }
+
+
+.dashslash {
+    padding-right: 1px;
+    padding-left: 8px;
+}
+
+.smallbox {
+    padding-right: 1px;
+}
+
+.mediumbox {
+    padding-right: 6px;
+}
+
+/*DatePicker Styles for current date*/
+._720kb-datepicker-calendar-day._720kb-datepicker-today {
+    background: #D93A2F;
+    color: white;
+}
+
+/*Styling for Advanced options in Application Summary*/
+#additionalSearch {
+    background-color: #DDD;
+}
+
+.additionalSearchStyle {
+    border: 0.25px solid #AAA;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.greyDiv {
+    background-color: #DDD;
+}
+
+.greyBoxStyle {
+    border: 0.25px solid #AAA;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.messageBoxStyle {
+    border: 1px solid #ddd;
+    background-color: #FEEDCC;
+    /*color: #31708f;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: justify;
+}
+
+.imgStylingAddtionalSearch {
+    cursor: pointer !important;
+    position: absolute !important;
+    right: 2px !important;
+    top: 3px !important;
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.dropdownArrowStyle {
+    cursor: pointer !important;
+    position: absolute !important;
+    right: 2px !important;
+    top: 3px !important;
+    width: 18px !important;
+    height: 18px !important;
+}
+
+.allignPDFButtonToRight {
+    position: absolute !important;
+    right: 10px !important;
+}
+
+.allignExcelToRight {
+    position: absolute !important;
+    right: 150px !important;
+}
+
+.changeCursor {
+    cursor: pointer;
+}
+
+
+/*DatePicker Styles*/
+.full button span {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+}
+
+.partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+}
+
+#appsummary td span {
+    color: black !important;
+    padding: 4px 0px;
+}
+
+.dropdown-menu table {
+    height: 100px;
+    width: 150px;
+}
+
+#appsummary .btn-sm {
+    line-height: 0.5;
+}
+
+#FortivaAccountLookup td span {
+    color: black !important;
+    padding: 4px 0px;
+}
+
+#FortivaAccountLookup .btn-sm {
+    line-height: 0.5;
+}
+
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: #E16159 !important;
+}
+
+/*Styling form confirmation box*/
+#conifrmationDialogue {
+    left: 0px !important;
+    font-size: 16px !important;
+    font-family: 'Montserrat-Regular' !important;
+}
+
+    #conifrmationDialogue h2 {
+        font-size: 16px !important;
+        font-family: 'Montserrat-Regular' !important;
+    }
+
+.modal-footer {
+    border-top: 0px !important;
+}
+
+/*CSS to control double scroll on screen resize*/
+
+/*CSS to style brand image*/
+.brandLogo {
+    top: 68px;
+    float: right;
+    margin-right: 10px;
+}
+
+select:focus {
+    width: auto;
+    position: relative;
+}
+
+#Sale span {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+}
+
+#Sale select {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    min-height: 24px;
+    width: 100%;
+}
+
+#Sale input {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    width: 100%;
+}
+
+.logout-style {
+    padding-right: 5px;
+    padding-top: 5px;
+}
+
+.logout-span {
+    padding-right: 3px;
+}
+
+.anchorStyle {
+    color: #337ab7;
+    text-decoration: none;
+    font-size: 14px !important;
+}
+
+    .anchorStyle:hover {
+        color: #337ab7;
+        cursor: pointer;
+        text-decoration: underline;
+        font-size: 14px !important;
+    }
+/*Styling form tooltip arrow*/
+.tooltip.top .tooltip-arrow {
+    border-top-color: #E16159 !important;
+}
+
+#apply .nav > li > a {
+    font-weight: 500;
+    padding: 10px 15px 10px 15px;
+    font-size: 14px;
+    margin: 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+#apply .nav-tabs > li.active > a, #apply .nav-tabs > li.active > a:focus, #apply .nav-tabs > li.active > a:hover {
+    border: 1px solid #D93A2F;
+    border-bottom: 1px solid #ddd;
+}
+
+#apply span {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+}
+
+#apply select {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    min-height: 24px;
+    width: 100%;
+}
+
+#apply a {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+}
+
+#apply input {
+    font-family: 'Montserrat-Regular';
+    font-size: 13px;
+    width: 100%;
+}
+
+    #apply input[type=radio] {
+        width: auto;
+    }
+
+    #apply input[type=checkbox] {
+        width: auto;
+        margin: 0px;
+    }
+/*Startup loader*/
+.startupLoader {
+    border: 4px solid #D93A2F;
+    border-radius: 100%;
+    border-top: 4px solid #F3F3F4;
+    border-bottom: 4px solid #F3F3F4;
+    width: 50px;
+    height: 50px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.center-allign {
+    position: absolute;
+    left: 35%;
+    top: 45%;
+}
+
+.floatLeft {
+    float: left;
+}
+/*Content top min height adjusted because breadcrumbs are not part for _LayoutPartial*/
+.Layout-min-height{
+    min-height:725px;
+}
+.FCException{
+    padding-left:1.5%;
+}
+.FCException ul{
+    display: block;   
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px; 
+}
+.FCException ul li{    
+    display:list-item!important;
+}
+.FCException ul {    
+    padding-left:40px;   
+}
+.customTopMargin{
+    margin-top:14px;
+}
+.informationBox {
+    display: inline-block;
+    border-radius: 20px;
+    padding: 5px;   
+    color: rgb(59, 115, 185);
+    opacity: 0.83;
+    transition: opacity 0.6s;
+    margin-bottom: 15px;
+    border: 2px solid #D93A2F;
+}
+.allignInformationBox{
+    margin-left:1%;
+}
+.rightAllign{
+            float:right;
+}
+.allSideMargin{
+    margin-left:12px !important;
+    margin-right:12px !important;
+}
+.modalVerbiage {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modalVerbiage:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+.modalVerbiage-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.topMargin{
+    margin-top:1px;
+}
+table.dataTable, table.dataTable th, table.dataTable td{
+    cursor:pointer!important;
+}
+.fullWidth{
+    width:100%!important;
+}
+input[type=search]{
+    border:1px solid #E4E4E4 !important;
+    border-radius:3px !important;
+}
+.btn-default{
+    color:#d9534f;
+}
+ .isa_success {
+    color: #4F8A10;
+    /*background-color: #DFF2BF;*/
+}
+ .dropdown-menu{
+     left:0px !important;
+     width:100%!important;
+ }
+ .dropdown ng-scope open{
+     height:40px!important;
+ }
+ [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}

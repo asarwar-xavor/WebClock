@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = null;
+}
+<html>
+<head>
+</head>
+<body>
+    <input type="hidden" value="@ViewData["RedirectURL"]" id="redirectionURL" />
+    <script>        
+        var redirectionUrl = document.getElementById("redirectionURL").value;
+        if(redirectionUrl=="101")
+            window.location.href = "/Home/Error";
+        else if (redirectionUrl != null && redirectionUrl != "")
+            window.location.href = redirectionUrl;
+        else
+            window.location.href = "/Home/Login";
+    </script>
+</body>
+
+</html>

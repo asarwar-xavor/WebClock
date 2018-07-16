@@ -1,0 +1,40 @@
+Date & Time: Wednesday, July 11, 2018 6:54:10 AM
+--------------------------------------------------
+..::INFO::..
+--------------------------------------------------
+
+Detail: User-Agent String = Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+
+==================================================
+Date & Time: Wednesday, July 11, 2018 6:55:13 AM
+--------------------------------------------------
+..::INFO::..
+--------------------------------------------------
+
+Detail: User-Agent String = Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+
+==================================================
+Date & Time: Wednesday, July 11, 2018 6:55:27 AM
+--------------------------------------------------
+..::INFO::..
+--------------------------------------------------
+
+Detail: User-Agent String = Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+
+==================================================
+Date & Time: Wednesday, July 11, 2018 6:55:31 AM
+--------------------------------------------------
+..::INFO::..
+--------------------------------------------------
+
+Detail: User-Agent String = Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+
+==================================================
+Date & Time: Wednesday, July 11, 2018 6:58:49 AM
+--------------------------------------------------
+..::INFO::..
+--------------------------------------------------
+
+Detail: User-Agent String = Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+
+==================================================

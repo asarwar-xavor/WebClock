@@ -1,0 +1,405 @@
+Date & Time: Thursday, June 28, 2018 5:12:14 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Sequence contains no elements
+Source: System.Linq
+Stack Trace:    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at lambda_method(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass20_0`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GC.WebClock.Services.DBService.GetConfigurationProperties(String key) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 23
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 5:37:26 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Sequence contains no elements
+Source: System.Linq
+Stack Trace:    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at lambda_method(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass20_0`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GC.WebClock.Services.DBService.GetConfigurationProperties(String key) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 23
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 8:46:42 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Unable to cast object of type 'System.Int32' to type 'System.String'.
+Source: System.Data.SqlClient
+Stack Trace:    at System.Data.SqlClient.SqlBuffer.get_String()
+   at GC.WebClock.Services.DBService.SafeGetString(DbDataReader reader, Int32 colIndex) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 313
+   at GC.WebClock.Services.DBService.GetClockDetails(Int32 skipRows, Int32 pageSize, String sortColumn, String sortColumnDir, String searchValue) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 275
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 8:46:42 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Value cannot be null.
+Parameter name: String
+Source: System.Private.CoreLib
+Stack Trace:    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at GC.WebClock.Controllers.WebClockApiController.GetClockDetails(String data) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Controllers\WebClockApiController.cs:line 238
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 8:47:22 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Unable to cast object of type 'System.Int32' to type 'System.String'.
+Source: System.Data.SqlClient
+Stack Trace:    at System.Data.SqlClient.SqlBuffer.get_String()
+   at GC.WebClock.Services.DBService.SafeGetString(DbDataReader reader, Int32 colIndex) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 313
+   at GC.WebClock.Services.DBService.GetClockDetails(Int32 skipRows, Int32 pageSize, String sortColumn, String sortColumnDir, String searchValue) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 275
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 8:47:22 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Value cannot be null.
+Parameter name: String
+Source: System.Private.CoreLib
+Stack Trace:    at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at GC.WebClock.Controllers.WebClockApiController.GetClockDetails(String data) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Controllers\WebClockApiController.cs:line 238
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 9:50:15 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Sequence contains no elements
+Source: System.Linq
+Stack Trace:    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at lambda_method(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass20_0`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GC.WebClock.Services.DBService.GetConfigurationProperties(String key) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 25
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 9:50:15 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Sequence contains no elements
+Source: System.Linq
+Stack Trace:    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at lambda_method(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass20_0`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GC.WebClock.Services.DBService.UpdateClock(Int32 clockId, String location, String clockName, String encodedSecurityCode) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 187
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 9:50:20 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Sequence contains no elements
+Source: System.Linq
+Stack Trace:    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at lambda_method(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass20_0`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GC.WebClock.Services.DBService.GetConfigurationProperties(String key) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 25
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 9:50:20 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Sequence contains no elements
+Source: System.Linq
+Stack Trace:    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at lambda_method(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass20_0`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GC.WebClock.Services.DBService.UpdateClock(Int32 clockId, String location, String clockName, String encodedSecurityCode) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 187
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 9:50:28 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Sequence contains no elements
+Source: System.Linq
+Stack Trace:    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at lambda_method(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass20_0`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GC.WebClock.Services.DBService.GetConfigurationProperties(String key) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 25
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 9:50:28 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Sequence contains no elements
+Source: System.Linq
+Stack Trace:    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at lambda_method(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass20_0`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GC.WebClock.Services.DBService.UpdateClock(Int32 clockId, String location, String clockName, String encodedSecurityCode) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 187
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 9:50:57 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Sequence contains no elements
+Source: System.Linq
+Stack Trace:    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at lambda_method(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass20_0`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GC.WebClock.Services.DBService.DeleteClock(Int32 clockId) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 172
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 9:52:11 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Sequence contains no elements
+Source: System.Linq
+Stack Trace:    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at lambda_method(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass20_0`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GC.WebClock.Services.DBService.GetConfigurationProperties(String key) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 25
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 9:52:11 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Sequence contains no elements
+Source: System.Linq
+Stack Trace:    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at lambda_method(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass20_0`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GC.WebClock.Services.DBService.UpdateClock(Int32 clockId, String location, String clockName, String encodedSecurityCode) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 187
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 9:53:45 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Sequence contains no elements
+Source: System.Linq
+Stack Trace:    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at lambda_method(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass20_0`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GC.WebClock.Services.DBService.DeleteClock(Int32 clockId) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 172
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 9:58:51 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Unable to cast object of type 'System.String' to type 'System.Int32'.
+Source: System.Data.SqlClient
+Stack Trace:    at System.Data.SqlClient.SqlBuffer.get_Int32()
+   at GC.WebClock.Services.DBService.GetClockDetails(Int32 skipRows, Int32 pageSize, String sortColumn, String sortColumnDir, String searchValue) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 278
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 10:05:56 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Sequence contains no elements
+Source: System.Linq
+Stack Trace:    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at lambda_method(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass20_0`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GC.WebClock.Services.DBService.GetConfigurationProperties(String key) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 25
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 10:07:51 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Sequence contains no elements
+Source: System.Linq
+Stack Trace:    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at lambda_method(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass20_0`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GC.WebClock.Services.DBService.GetConfigurationProperties(String key) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 25
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 10:11:26 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Object reference not set to an instance of an object.
+Source: GC.WebClock
+Stack Trace:    at GC.WebClock.Utilities.Util.GetLocationFromName(String locationName) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Utilities\Util.cs:line 254
+   at GC.WebClock.Controllers.WebClockApiController.AddClock(String location, String clockName, String locationName, String encodedSecurityCode) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Controllers\WebClockApiController.cs:line 189
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, June 28, 2018 10:12:27 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Object reference not set to an instance of an object.
+Source: GC.WebClock
+Stack Trace:    at GC.WebClock.Utilities.Util.GetLocationFromName(String locationName) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Utilities\Util.cs:line 254
+   at GC.WebClock.Controllers.WebClockApiController.AddClock(String location, String clockName, String locationName, String encodedSecurityCode) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Controllers\WebClockApiController.cs:line 189
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================

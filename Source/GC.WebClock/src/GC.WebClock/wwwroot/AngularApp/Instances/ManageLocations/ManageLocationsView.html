@@ -1,0 +1,131 @@
+﻿<div ng-app="ManageLocationsInstanceModule" ng-controller="ManageLocationsInstanceCtrl" ng-show="adminValue">
+    <div class="col-md-12" ng-show="mode=='Table' && dataLoaded">
+      
+        <div class="col-md-12">
+            <div class="row">
+                <!--<div class="col-md-12">
+                    <table style="width:100%" id="locationGrid" datatable dt-options="dtOptionsLocations" dt-columns="dtColumnsLocations"></table>
+                </div>-->
+
+                <div class="col-md-12">
+                    <table id="manageLocations" class="display">
+                        <thead>
+                            <tr>
+                                <th>Location</th>
+                                <th>Clock Name</th>
+                                <th>Location Name</th>
+                               <th>View</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="loc in allLocations">
+                                <td>{{ loc.location }}</td>
+                                <td>{{ loc.clockName }}</td>
+                                <td>{{loc.locationName}}</td>  
+                                <td><i class="fa fa-eye"  ng-click="viewDetails(loc)"></i></td>                             
+                                <td><i class="fa fa-edit" ng-if="loc.clockType=='Exception'" ng-click="displayEditMode(loc)"></i></td>
+                                <td><i class="fa fa-times" ng-click="deleteLocation(loc.clockId)"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12" ng-show="mode=='Edit'">  
+        <form ng-submit="updateLocation(selectedLocationId,updatedLocation,updatedClockName)">
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><span>Location Number:</span></div>
+                <div class="col-md-3"><span>{{updatedLocation}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><span>Location Name:</span></div>
+                <div class="col-md-3"><span>{{updatedLocationName}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><span>*Clock Name:</span></div>
+                <div class="col-md-3"><input class="fullWidth" type="text" ng-model="updatedClockName" required/></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><span>*Security Code:</span></div>
+                <div class="col-md-3"><input class="fullWidth" type="text" ng-model="updatedSecurityCode" required /></div>
+                <div class="col-md-3 text-info"><span>{{securityCodeMessage}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="btn btn-danger" type="submit">Update</button>
+                    &nbsp;&nbsp;<button type="button" class="btn btn-danger" ng-click="goToHome()">Back</button>
+                </div>
+            </div>
+        </form> 
+        <div class="col-md-12" ng-show="isUpdated">
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-12 isa_success">{{updateSuccess}}</div>
+            </div>
+        </div>   
+    </div>  
+
+    <div class="col-md-12" ng-show="mode=='View'">
+       
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><span>Location Number:</span></div>
+                <div class="col-md-3"><span>{{viewLocationNumber}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><span>Location Name:</span></div>
+                <div class="col-md-3"><span>{{viewLocationName}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>       
+        <div class="row">
+            <div class="col-md-2"><span>Silverlight Clock URL:</span></div>
+            <div class="col-md-10"><span>{{silverLighClockURL}}</span></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"><span>HTML Clock URL:</span></div>
+            <div class="col-md-10"><span>{{HTMLClockURL}}</span></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12"></div>
+        </div>
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">                 
+                   <button type="button" class="btn btn-danger" ng-click="mode ='Table'">Back</button>
+                </div>
+            </div>               
+    </div>  
+</div>

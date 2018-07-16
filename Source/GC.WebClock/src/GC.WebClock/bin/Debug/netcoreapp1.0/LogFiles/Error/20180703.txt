@@ -1,0 +1,137 @@
+Date & Time: Tuesday, July 03, 2018 2:34:55 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: An exception was thrown while attempting to evaluate a LINQ query parameter expression. To show additional information call EnableSensitiveDataLogging() when overriding DbContext.OnConfiguring.
+Source: Microsoft.EntityFrameworkCore
+Stack Trace:    at Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.ParameterExtractingExpressionVisitor.Evaluate(Expression expression, String& parameterName)
+   at Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.ParameterExtractingExpressionVisitor.TryExtractParameter(Expression expression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at System.Linq.Expressions.ExpressionVisitor.VisitBinary(BinaryExpression node)
+   at System.Linq.Expressions.BinaryExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.ParameterExtractingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+   at System.Linq.Expressions.BinaryExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at System.Linq.Expressions.ExpressionVisitor.VisitLambda[T](Expression`1 node)
+   at Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.ParameterExtractingExpressionVisitor.VisitLambda[T](Expression`1 node)
+   at System.Linq.Expressions.Expression`1.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at System.Linq.Expressions.ExpressionVisitor.VisitUnary(UnaryExpression node)
+   at Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.ParameterExtractingExpressionVisitor.VisitUnary(UnaryExpression unaryExpression)
+   at System.Linq.Expressions.UnaryExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at System.Dynamic.Utils.ExpressionVisitorUtils.VisitArguments(ExpressionVisitor visitor, IArgumentProvider nodes)
+   at System.Linq.Expressions.ExpressionVisitor.VisitMethodCall(MethodCallExpression node)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.ParameterExtractingExpressionVisitor.ExtractParameters(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExtractParameters(Expression query, QueryContext queryContext)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.Execute[TResult](Expression query)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GC.WebClock.Services.DBService.GetConfigurationProperties(String key) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 25
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+Message: Object reference not set to an instance of an object.
+Source: Anonymously Hosted DynamicMethods Assembly
+Stack Trace:    at lambda_method(Closure )
+   at Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal.ParameterExtractingExpressionVisitor.Evaluate(Expression expression, String& parameterName)
+
+---------------------------------------------
+..:: FURTHER INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Tuesday, July 03, 2018 2:34:55 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Object reference not set to an instance of an object.
+Source: GC.WebClock
+Stack Trace:    at GC.WebClock.Utilities.Util.GetLocationFromName(String locationName) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Utilities\Util.cs:line 254
+   at GC.WebClock.Controllers.WebClockApiController.AddClock(String location, String locationName, String locType) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Controllers\WebClockApiController.cs:line 187
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Tuesday, July 03, 2018 4:04:45 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Object reference not set to an instance of an object.
+Source: GC.WebClock
+Stack Trace:    at GC.WebClock.Utilities.Util.GetLocationFromName(String locationName) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Utilities\Util.cs:line 254
+   at GC.WebClock.Controllers.WebClockApiController.GenerateClock(String location, String clockName) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Controllers\WebClockApiController.cs:line 117
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Tuesday, July 03, 2018 4:33:47 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Object reference not set to an instance of an object.
+Source: GC.WebClock
+Stack Trace:    at GC.WebClock.Controllers.WebClockApiController.GenerateClock(String location, String clockName) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Controllers\WebClockApiController.cs:line 125
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Tuesday, July 03, 2018 6:24:27 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: 'GC.WebClock.Models.ADLocations' does not contain a definition for 'Title'
+Source: Anonymously Hosted DynamicMethods Assembly
+Stack Trace:    at CallSite.Target(Closure , CallSite , Object )
+   at CallSite.Target(Closure , CallSite , Object )
+   at GC.WebClock.Services.DBService.GetClockDetails(Int32 skipRows, Int32 pageSize, String sortColumn, String sortColumnDir, String searchValue, ADLocationsModel allLocations) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 283
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Tuesday, July 03, 2018 6:28:11 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Cannot implicitly convert type 'GC.WebClock.Models.ADLocations' to 'bool'
+Source: Anonymously Hosted DynamicMethods Assembly
+Stack Trace:    at CallSite.Target(Closure , CallSite , Object )
+   at CallSite.Target(Closure , CallSite , Object )
+   at GC.WebClock.Services.DBService.GetClockDetails(Int32 skipRows, Int32 pageSize, String sortColumn, String sortColumnDir, String searchValue, ADLocationsModel allLocations) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 283
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
