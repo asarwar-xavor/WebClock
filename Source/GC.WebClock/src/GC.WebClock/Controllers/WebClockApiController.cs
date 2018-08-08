@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using GC.WebClock.Models;
 using GC.WebClock.Services;
 using GC.WebClock.Utilities;
-using System.Security.Principal;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace GC.WebClock.Controllers
 {    
+    
     public class WebClockApiController : Controller
     {
         GC_WebClockContext _context;
@@ -23,7 +21,8 @@ namespace GC.WebClock.Controllers
             dbService = new DBService(_context);            
         }
         [HttpGet]
-        [Route("WebClockApi/GetClockURL")]        
+        [Route("WebClockApi/GetClockURL")]
+        [Authorize]
         public ActionResult GetClockURL(int number)
         {
             try
@@ -80,6 +79,7 @@ namespace GC.WebClock.Controllers
 
         [HttpGet]
         [Route("WebClockApi/GetClocksOfAllLocations")]
+        [Authorize]
         public ActionResult GetClocksOfAllLocations(bool isPhysical)
         {
             try
@@ -104,6 +104,7 @@ namespace GC.WebClock.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("WebClockApi/GetLocationsWithClocks")]
+        [Authorize]
         public ActionResult GetLocationsWithClocks()
         {
             try
@@ -123,6 +124,7 @@ namespace GC.WebClock.Controllers
         }
         [HttpGet]
         [Route("WebClockApi/GenerateClock")]
+        [Authorize]
         public ActionResult GenerateClock(string location)
         {
             try
@@ -152,6 +154,7 @@ namespace GC.WebClock.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("WebClockApi/GetLocationsFromClocksList")]
+        [Authorize]
         public ActionResult GetLocationsFromClocksList()
         {
             try
@@ -172,6 +175,7 @@ namespace GC.WebClock.Controllers
 
         [HttpGet]
         [Route("WebClockApi/DeleteClock")]
+        [Authorize]
         public ActionResult DeleteClock(int clockId)
         {
             try
@@ -187,6 +191,7 @@ namespace GC.WebClock.Controllers
         }
         [HttpGet]
         [Route("WebClockApi/UpdateClock")]
+        [Authorize]
         public ActionResult UpdateClock(int clockId, string location, string clockName,string securityCode)
         {
             try
@@ -203,6 +208,7 @@ namespace GC.WebClock.Controllers
         }
         [HttpGet]
         [Route("WebClockApi/AddClock")]
+        [Authorize]
         public ActionResult AddClock(string location, string locationName, string locType)
         {
             try
@@ -224,6 +230,7 @@ namespace GC.WebClock.Controllers
         }
         [HttpGet]
         [Route("WebClockApi/checkAdmin")]
+        [Authorize]
         public ActionResult checkAdmin()
         {
             try
@@ -240,6 +247,7 @@ namespace GC.WebClock.Controllers
 
         [HttpGet]
         [Route("WebClockApi/GetConfigurationProperties")]
+        [AllowAnonymous]
         public string GetConfigurationProperties(string key)
         {
             try
@@ -254,6 +262,7 @@ namespace GC.WebClock.Controllers
         }
         [HttpGet]
         [Route("WebClockApi/AddExceptionClock")]
+        [Authorize]
         public ActionResult AddExceptionClock(string location, string clockName, string locationName, string securityCode)
         {
             try

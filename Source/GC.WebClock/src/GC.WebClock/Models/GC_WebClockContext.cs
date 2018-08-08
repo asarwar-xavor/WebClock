@@ -1,10 +1,8 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+
 namespace GC.WebClock.Models
 {
-    public partial class GC_WebClockContext : IdentityDbContext<ApplicationUser>
+    public partial class GC_WebClockContext : DbContext
     {
         public virtual DbSet<ClocksList> ClocksList { get; set; }
         public virtual DbSet<ConfigurationProperties> ConfigurationProperties { get; set; }
@@ -16,8 +14,7 @@ namespace GC.WebClock.Models
             base.OnConfiguring(optionsBuilder);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
+        {            
             modelBuilder.Entity<ClocksList>(entity =>
             {
                 entity.HasKey(e => e.ClockId)

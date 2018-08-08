@@ -1,55 +1,51 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using GC.WebClock.Models;
 using GC.WebClock.Services;
 using GC.WebClock.Utilities;
-using System.Security.Principal;
-using System.Text;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc.Rendering;
+
 
 namespace GC.WebClock.Controllers
 {    
     public class HomeController : Controller
     {
         GC_WebClockContext _context;
-        DBService dbService;
-        private readonly SignInManager<ApplicationUser> _signInManager;
-        public HomeController(GC_WebClockContext context, SignInManager<ApplicationUser> signInManager)
+        DBService dbService;        
+        public HomeController(GC_WebClockContext context)
         {
-            _context = context;
-            _signInManager = signInManager;
+            _context = context;            
             dbService = new DBService(_context);
         }
         [AllowAnonymous]    
         public IActionResult Index()
         {
+            //Redirects user to Startup to read userAgent string if request is anonymous (First hit)
+            string storeFromQueryString = HttpContext.Request.Query["STORE"];
             bool isAuthenticated = HttpContext.User.Identity.IsAuthenticated;
             if (isAuthenticated == false)
-                return RedirectToAction("Startup", "Home");
+                return RedirectToAction("Startup",new { location = storeFromQueryString });
             return View();
         }
        [AllowAnonymous]
-        public IActionResult Startup()
+        public IActionResult Startup(string location)
         {        
             string locationID = "";
             ViewData["RedirectURL"] = "";
+            ViewData["LocationID"] = "";
             var userAgent = Request.Headers["User-Agent"].ToString();
             CustomLogging.InfoLog("User-Agent String = " + userAgent);
-            locationID = Util.GetStoreFromUserAgent(userAgent);
+            locationID = String.IsNullOrEmpty(location)? Util.GetStoreFromUserAgent(userAgent):location;
             if (!String.IsNullOrEmpty(locationID))
             {
                 // Now if location is present, generate URL's 
                 ClockGenerator generatorObj = new ClockGenerator(_context);
-                ClockURL clockDTO = generatorObj.GetClockURLObject(locationID);
+                ClockURL clockDTO = generatorObj.GetClockURLObject(locationID);                              
                 //Check if clock is registered or not.
                 if(clockDTO.StatusCode == "101")
                 {
                     ViewData["RedirectURL"] = clockDTO.StatusCode;
+                    ViewData["LocationID"] = locationID;
                 }
                 else
                 {
@@ -63,95 +59,33 @@ namespace GC.WebClock.Controllers
                 }               
             }
             return View();
-        }
-        [HttpGet]
+        }                  
         [AllowAnonymous]
-        public IActionResult Login()
+        public IActionResult Error(string location)
         {
-            ViewData["InvalidCredentials"] = "";
-            return View();
-        }
-        [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
-        {
-            ViewData["InvalidCredentials"] = "";
-            ViewData["ReturnUrl"] = returnUrl;
-            if (ModelState.IsValid)
+            if(String.IsNullOrEmpty(location))
             {
-                var result = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, lockoutOnFailure: false);
-                if (result.Succeeded)
+                UserInfo userInfo = new UserInfo(_context, HttpContext, User);
+                string locationID = "";
+                var userDetails = userInfo.GetUserInfo();
+                locationID = userDetails.locationID;
+                if (locationID == "0" || locationID == null)
                 {
-                    return RedirectToLocal(returnUrl);
-                }             
-                else
-                {
-                    ViewData["InvalidCredentials"] = "Invalid Credentials";
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-                    return View(model);
+                    var userAgent = Request.Headers["User-Agent"].ToString();
+                    locationID = Util.GetStoreFromUserAgent(userAgent);
                 }
+                ViewBag.location = locationID;
             }
-
-            // If we got this far, something failed, redisplay form
-            return View(model);
-        }
-        // POST: /Account/LogOff
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> LogOff()
-        {
-            await _signInManager.SignOutAsync();
-            return RedirectToAction(nameof(HomeController.Index), "Home");
-        }
-        public async Task<IActionResult> Logout(string type)
-        {
-            try
+            else
             {
-                await _signInManager.SignOutAsync();
-                ViewBag.Message = "You have successfully logged out.";               
-            }
-            catch (Exception ex)
-            {
-                CustomLogging.ErrorLog(ex);
-                ViewBag.Message = "You have successfully logged out.";
-            }
-            return View();
-        }
-        [AllowAnonymous]
-        public IActionResult Error()
-        {
-            UserInfo userInfo = new UserInfo(_context, HttpContext, User);           
-            string locationID = "";
-            var userDetails = userInfo.GetUserInfo();            
-            locationID = userDetails.locationID;            
-            if (locationID == "0" || locationID == null)
-            {
-                var userAgent = Request.Headers["User-Agent"].ToString();
-                locationID = Util.GetStoreFromUserAgent(userAgent);
-            }
-            ViewBag.location = locationID;
+                ViewBag.location = location;
+            }                       
             return View();
         }
         [AllowAnonymous]
         public IActionResult ServerInfo()
         {            
             return View();
-        }
-        #region Helpers
-
-        private IActionResult RedirectToLocal(string returnUrl)
-        {
-            if (Url.IsLocalUrl(returnUrl))
-            {
-                return Redirect(returnUrl);
-            }
-            else
-            {
-                return RedirectToAction(nameof(HomeController.Index), "Home");
-            }
-        }
-
-        #endregion     
+        }     
     }
 }

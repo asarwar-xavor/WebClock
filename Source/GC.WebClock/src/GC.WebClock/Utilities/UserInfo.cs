@@ -124,6 +124,7 @@ namespace GC.WebClock.Utilities
                         ? Util.GetDomainNameFromUsername(_user.Identity.Name)
                         : Util.GetDomainNameFromUsername(System.Security.Principal.WindowsIdentity.GetCurrent().Name);
                 var accountName = @"" + (_user.Identity.Name != null ? _user.Identity.Name : WindowsIdentity.GetCurrent().Name);
+                CustomLogging.InfoLog("Loggedin User = " + accountName);
                 var binding = new BasicHttpBinding();
                 binding.Name = "UserInfoWebServiceSoap";
                 binding.Security.Mode = BasicHttpSecurityMode.TransportCredentialOnly;

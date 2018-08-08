@@ -1,5 +1,5 @@
---temp-output:D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\obj\Debug\netcoreapp1.0\
---out:D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\bin\Debug\netcoreapp1.0\GC.WebClock.dll
+--temp-output:D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\obj\Debug\netcoreapp1.0\
+--out:D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\bin\Debug\netcoreapp1.0\GC.WebClock.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -218,28 +218,29 @@
 --reference:C:\Users\admasarwar\.nuget\packages\System.Xml.XDocument\4.3.0\ref\netstandard1.3\System.Xml.XDocument.dll
 --reference:C:\Users\admasarwar\.nuget\packages\System.Xml.XmlDocument\4.3.0\ref\netstandard1.3\System.Xml.XmlDocument.dll
 --reference:C:\Users\admasarwar\.nuget\packages\System.Xml.XmlSerializer\4.0.11\ref\netstandard1.3\System.Xml.XmlSerializer.dll
---resource:"D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\obj\Debug\netcoreapp1.0\GC.WebClockdotnet-compile.deps.json",GC.WebClock.deps.json
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Program.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Startup.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Controllers\HomeController.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Controllers\WebClockApiController.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Models\ADLocationsModel.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Models\ApplicationSignInManager.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Models\ApplicationUser.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Models\ClocksList.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Models\ClocksListDTO.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Models\ClockURL.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Models\ConfigurationProperties.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Models\DataProtectionKey.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Models\DataProtectionKeyRepository.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Models\GC_WebClockContext.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Models\LoginViewModel.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Models\UserInfoModel.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Service References\StoreServiceReference\Reference.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Service References\UserInfoServiceReference\Reference.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Utilities\ClockGenerator.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Utilities\CustomLogging.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Utilities\StoreInfo.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Utilities\UserInfo.cs
-D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Utilities\Util.cs
+--resource:"D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\obj\Debug\netcoreapp1.0\GC.WebClockdotnet-compile.deps.json",GC.WebClock.deps.json
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Program.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Startup.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Controllers\Admin.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Controllers\HomeController.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Controllers\WebClockApiController.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Models\ADLocationsModel.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Models\ApplicationSignInManager.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Models\ApplicationUser.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Models\ClocksList.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Models\ClocksListDTO.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Models\ClockURL.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Models\ConfigurationProperties.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Models\DataProtectionKey.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Models\DataProtectionKeyRepository.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Models\GC_WebClockContext.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Models\LoginViewModel.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Models\UserInfoModel.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Service References\StoreServiceReference\Reference.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Service References\UserInfoServiceReference\Reference.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Services\DBService.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Utilities\ClockGenerator.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Utilities\CustomLogging.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Utilities\StoreInfo.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Utilities\UserInfo.cs
+D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Utilities\Util.cs

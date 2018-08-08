@@ -51,18 +51,15 @@
                     <div class="full-right name-caret">
                         <div class="welcome">
                             <a href="#"><span>Welcome, @userName</span></a>
-                        </div>                                          
-                        <div class="logout changeCursor">
-                            <img src="~/images/logout20.png" title="Logout" alt="Logout" onmouseover="this.src='/images/logout_alt20.png'" onmouseout="this.src='/images/logout20.png'" onclick="signoutConfirmation()" />
-                        </div>
+                        </div>                                                                
                     </div>
                     <div class="clearfix"> </div>
                     <div class="navbar-default sidebar" role="navigation">
                         <div class="sidebar-nav navbar-collapse">
                             <ul class="nav" id="side-menu" ng-show="isAdmin">                                
-                                <li><a href="../#AddClock" id="addClockLink" class="hvr-bounce-to-right" target="_self">Add Standard Clock</a></li>
-                                <li><a href="../#AddExceptionClock" id="AddExceptionClockLink" class="hvr-bounce-to-right" target="_self">Add Exception Clock</a></li>
-                                <li><a href="../#ManageLocations" id="manageLocationsLink" class="hvr-bounce-to-right" target="_self">View All Clocks</a></li>                                                                                                                     
+                                <li><a href="#AddClock" id="addClockLink" class="hvr-bounce-to-right" target="_self">Add Standard Clock</a></li>
+                                <li><a href="#AddExceptionClock" id="AddExceptionClockLink" class="hvr-bounce-to-right" target="_self">Add Exception Clock</a></li>
+                                <li><a href="#ManageLocations" id="manageLocationsLink" class="hvr-bounce-to-right" target="_self">View All Clocks</a></li>                                                                                                                     
                             </ul>
                         </div>
                     </div>
@@ -119,16 +116,7 @@
         "timeOut": "0",
         "extendedTimeOut": "0",
         "closeButton":true      
-    }
-    function signoutConfirmation() {
-        if (confirm("Are you sure you want to logout from Web Clock?") == true) {
-            window.location.href = "/Home/Logout?type=logout";
-        } else {
-
-        }
-    }
+    }   
     </script>
 </body>
-
-
 </html>
