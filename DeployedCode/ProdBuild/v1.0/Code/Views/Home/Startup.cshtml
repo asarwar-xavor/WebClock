@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+<html>
+<head>
+</head>
+<body>
+    <input type="hidden" value="@ViewData["RedirectURL"]" id="redirectionURL" />
+    <input type="hidden" value="@ViewData["LocationID"]" id="locationID" />
+    <script src="~/js/jquery.min.js"></script>
+    <script>  
+        $(document).ready(function () {            
+            var redirectionUrl = document.getElementById("redirectionURL").value;
+            var locationID = document.getElementById("locationID").value;
+            if (redirectionUrl == "101")
+                window.location.href = "/Home/Error?location=" + locationID;
+            else if (redirectionUrl != null && redirectionUrl != "")
+                window.location.href = redirectionUrl;
+            else
+                window.location.href = "/Admin/Index";
+        });
+      
+    </script>
+</body>
+
+</html>
