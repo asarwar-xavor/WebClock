@@ -1,0 +1,56 @@
+Date & Time: Thursday, July 19, 2018 4:35:59 AM
+--------------------------------------------------
+..::INFO::..
+--------------------------------------------------
+
+Detail: User-Agent String = Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+
+==================================================
+Date & Time: Thursday, July 19, 2018 4:36:31 AM
+--------------------------------------------------
+..::INFO::..
+--------------------------------------------------
+
+Detail: User-Agent String = Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+
+==================================================
+Date & Time: Thursday, July 19, 2018 6:27:55 AM
+--------------------------------------------------
+..::INFO::..
+--------------------------------------------------
+
+Detail: User-Agent String = Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko STORE=904) Chrome/67.0.3396.99 Safari/537.36
+
+==================================================
+Date & Time: Thursday, July 19, 2018 6:32:38 AM
+--------------------------------------------------
+..::INFO::..
+--------------------------------------------------
+
+Detail: User-Agent String = Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+
+==================================================
+Date & Time: Thursday, July 19, 2018 6:33:33 AM
+--------------------------------------------------
+..::INFO::..
+--------------------------------------------------
+
+Detail: User-Agent String = Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+
+==================================================
+Date & Time: Thursday, July 19, 2018 6:33:33 AM
+--------------------------------------------------
+..::INFO::..
+--------------------------------------------------
+
+Detail: User-Agent String = Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36
+
+==================================================
+Date & Time: Thursday, July 19, 2018 6:33:55 AM
+--------------------------------------------------
+..::INFO::..
+--------------------------------------------------
+
+Detail: Loggedin User = DOMESTICDEV\admasarwar
+
+==================================================

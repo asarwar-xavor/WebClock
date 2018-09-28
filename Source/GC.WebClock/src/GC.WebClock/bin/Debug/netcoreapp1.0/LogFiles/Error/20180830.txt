@@ -1,0 +1,106 @@
+Date & Time: Thursday, August 30, 2018 11:06:06 PM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: The HTTP service located at http://userinfowebservicedev.guitarcenter.com/UserInfoWebService.asmx is unavailable.  This could be because the service is too busy or because no endpoint was found listening at the specified address. Please ensure that the address is correct and try accessing the service again later.
+Source: System.Private.ServiceModel
+Stack Trace:    at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass1_0.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at GC.WebClock.Utilities.UserInfo.GetWebClockMembership() in D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Utilities\UserInfo.cs:line 141
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, August 30, 2018 11:06:06 PM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Object reference not set to an instance of an object.
+Source: GC.WebClock
+Stack Trace:    at GC.WebClock.Utilities.UserInfo.isAdmin() in D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Utilities\UserInfo.cs:line 156
+   at GC.WebClock.Controllers.WebClockApiController.GetClockURL(Int32 number) in D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Controllers\WebClockApiController.cs:line 31
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, August 30, 2018 11:10:56 PM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: The HTTP service located at http://userinfowebservicedev.guitarcenter.com/UserInfoWebService.asmx is unavailable.  This could be because the service is too busy or because no endpoint was found listening at the specified address. Please ensure that the address is correct and try accessing the service again later.
+Source: System.Private.ServiceModel
+Stack Trace:    at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass1_0.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at GC.WebClock.Utilities.UserInfo.GetWebClockMembership() in D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Utilities\UserInfo.cs:line 141
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, August 30, 2018 11:11:46 PM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: The HTTP service located at http://userinfowebservicedev.guitarcenter.com/UserInfoWebService.asmx is unavailable.  This could be because the service is too busy or because no endpoint was found listening at the specified address. Please ensure that the address is correct and try accessing the service again later.
+Source: System.Private.ServiceModel
+Stack Trace:    at System.Runtime.AsyncResult.End[TAsyncResult](IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.SendAsyncResult.End(SendAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannel.EndCall(String action, Object[] outs, IAsyncResult result)
+   at System.ServiceModel.Channels.ServiceChannelProxy.TaskCreator.<>c__DisplayClass1_0.<CreateGenericTask>b__0(IAsyncResult asyncResult)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.ConfiguredTaskAwaitable`1.ConfiguredTaskAwaiter.GetResult()
+   at GC.WebClock.Utilities.UserInfo.GetWebClockMembership() in D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Utilities\UserInfo.cs:line 141
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Thursday, August 30, 2018 11:11:46 PM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Object reference not set to an instance of an object.
+Source: GC.WebClock
+Stack Trace:    at GC.WebClock.Utilities.UserInfo.isAdmin() in D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Utilities\UserInfo.cs:line 156
+   at GC.WebClock.Controllers.WebClockApiController.GetClockURL(Int32 number) in D:\arslan.sarwar\GC_WebClock\Source\GC.WebClock\src\GC.WebClock\Controllers\WebClockApiController.cs:line 31
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================

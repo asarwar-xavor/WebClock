@@ -1,0 +1,49 @@
+﻿<div ng-app="AddExceptionClockInstanceModule" ng-controller="AddExceptionClockInstanceCtrl" ng-show="adminValue">  
+    <div class="col-md-12">
+        <form ng-submit="AddExceptionClock(clockName,securityCode)">
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+            <div class="row" ng-if="displayDropDown">
+                <div class="col-md-2"><span>*Location:</span></div>
+                <div class="col-sm-3">
+                    <typeahead-dropdown ng-model='selectedLocation' options='locations' ng-required="true" config='config'></typeahead-dropdown>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><span>*Clock Name:</span></div>
+                <div class="col-md-3"><input class="fullWidth" type="text" ng-model="clockName" required /></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><span>*Security Code:</span></div>
+                <div class="col-md-3"><input class="fullWidth" type="text" ng-model="securityCode" required /></div>
+                <div class="col-md-3 text-info"><span>{{securityCodeMessage}}</span></div>
+                
+            </div>
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="btn btn-danger" type="submit">Add Clock</button>
+                    &nbsp;&nbsp;<button class="btn btn-danger" type="button" ng-click="goToHome()">Go To Home</button>
+                </div>
+            </div>
+        </form>
+        <div class="col-md-12" ng-show="isadded">
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+            <hr />
+            <div class="row">
+                <div class="col-md-12 isa_success">{{addSuccess}}</div>
+            </div>
+        </div>
+    </div>     
+</div>

@@ -1,0 +1,120 @@
+Date & Time: Monday, July 02, 2018 5:47:13 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: There is an error in XML document (1, 2).
+Source: System.Xml.XmlSerializer
+Stack Trace:    at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, Object events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at GC.WebClock.Utilities.Util.ConvertXmlNodeToObject[T](XmlNode node) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Utilities\Util.cs:line 47
+   at GC.WebClock.Utilities.StoreInfo.GetAllStatesFromStoreInfo(Boolean isPhysical) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Utilities\StoreInfo.cs:line 53
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+Message: <LocInfo xmlns=''> was not expected.
+Source: Microsoft.GeneratedCode
+Stack Trace:    at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderADLocationsModel.Read4_NewDataSet()
+
+---------------------------------------------
+..:: FURTHER INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Monday, July 02, 2018 5:49:19 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: There is an error in XML document (1, 2).
+Source: System.Xml.XmlSerializer
+Stack Trace:    at System.Xml.Serialization.XmlSerializer.Deserialize(XmlReader xmlReader, String encodingStyle, Object events)
+   at System.Xml.Serialization.XmlSerializer.Deserialize(Stream stream)
+   at GC.WebClock.Utilities.Util.ConvertXmlNodeToObject[T](XmlNode node) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Utilities\Util.cs:line 47
+   at GC.WebClock.Utilities.StoreInfo.GetAllStatesFromStoreInfo(Boolean isPhysical) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Utilities\StoreInfo.cs:line 53
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+Message: <diffgram xmlns='urn:schemas-microsoft-com:xml-diffgram-v1'> was not expected.
+Source: Microsoft.GeneratedCode
+Stack Trace:    at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationReaderADLocationsModel.Read4_NewDataSet()
+
+---------------------------------------------
+..:: FURTHER INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Monday, July 02, 2018 5:56:25 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Sequence contains no elements
+Source: System.Linq
+Stack Trace:    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at lambda_method(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass20_0`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GC.WebClock.Services.DBService.GetConfigurationProperties(String key) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 25
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Monday, July 02, 2018 6:07:00 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Sequence contains no elements
+Source: System.Linq
+Stack Trace:    at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at lambda_method(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass20_0`1.<CompileQueryCore>b__0(QueryContext qc)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source, Expression`1 predicate)
+   at GC.WebClock.Services.DBService.GetConfigurationProperties(String key) in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 25
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
+Date & Time: Monday, July 02, 2018 7:11:41 AM
+---------------------------------------------
+..:: EXCEPTION ::..
+---------------------------------------------
+
+Message: Object reference not set to an instance of an object.
+Source: Anonymously Hosted DynamicMethods Assembly
+Stack Trace:    at lambda_method(Closure , ValueBuffer )
+   at System.Linq.EnumerableSorter`2.ComputeKeys(TElement[] elements, Int32 count)
+   at System.Linq.EnumerableSorter`1.ComputeMap(TElement[] elements, Int32 count)
+   at System.Linq.EnumerableSorter`1.Sort(TElement[] elements, Int32 count)
+   at System.Linq.OrderedEnumerable`1.<GetEnumerator>d__3.MoveNext()
+   at System.Linq.Enumerable.SelectIPartitionIterator`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Collections.Generic.EnumerableHelpers.ToArray[T](IEnumerable`1 source, Int32& length)
+   at System.Collections.Generic.EnumerableHelpers.ToArray[T](IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at GC.WebClock.Services.DBService.GetLocationsWithClocks() in D:\arslan.sarwar\GC_WebClock\GC.WebClock\src\GC.WebClock\Services\DBService.cs:line 84
+
+---------------------------------------------
+..:: INNER EXCEPTION ::..
+---------------------------------------------
+
+NONE
+
+=============================================
