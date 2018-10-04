@@ -18,6 +18,7 @@
             $scope.clockName = "";
             $scope.displayDropDown = false;
             $scope.isadded = false;
+            $scope.locationType = "GC";
 
             // Authorizing user
             if ($rootScope.adminValue == null) {
@@ -69,7 +70,7 @@
                     toastr["error"]('<div><span>'+$scope.locationError+'</span></div>')
                 else {
                     $scope.isadded = false;
-                    clockGeneratorService.addExceptionClock($scope.selectedLocation.location, clockName, $scope.selectedLocation.label, securityCode).then(function (response) {
+                    clockGeneratorService.addExceptionClock($scope.selectedLocation.location, clockName, $scope.selectedLocation.label, securityCode, $scope.locationType).then(function (response) {
                         if (response != null) {
                             if (response.data) {
                                 $scope.isadded = true;

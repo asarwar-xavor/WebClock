@@ -919,3 +919,19 @@ input[type=search]{
  [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
+ .headerDivStyle {
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #D93A2F;
+            font-size: 20px;
+            color: #fff;
+        }
+        .bodyStyle {
+            font-family: 'Montserrat-Regular';
+            background: #F3F3F4;
+            overflow-x: hidden;
+        }      
+        .centerAllign {
+            text-align: center;
+        } 

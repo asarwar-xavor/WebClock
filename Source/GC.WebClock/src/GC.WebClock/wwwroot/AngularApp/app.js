@@ -60,9 +60,11 @@
       $rootScope.dbLocations = null;
       $scope.displayDropDown = false;
       $scope.locations = null;
+      $scope.showRedirectionMessage=false;
+     
       // Api call to check if user is admin or not, if admin then display admin side else respective to required url or display dropdown
-      clockGeneratorService.getClockURLs(Math.floor((Math.random() * 100000) + 1)).then(function (response) {
-          if (response != null) {              
+      clockGeneratorService.getClockURLs(Math.floor((Math.random() * 100000) + 1)).then(function (response) {          
+          if (response != null) {             
               if (response.data.isAdmin)
               {
                   $scope.isAdmin = response.data.isAdmin;
@@ -74,12 +76,32 @@
                   if(response.data.statusCode=="101")
                       window.location.href = "/Home/Error";
                   else if (response.data.redirectURL != null && response.data.redirectURL != "")
-                      window.location.href = response.data.redirectURL;                  
+                  {
+                      if (response.data.locationType != null && response.data.locationType.toUpperCase().trim() == "MAA") {                          
+                          var redirectURL = response.data.redirectURL;
+                          clockGeneratorService.getConfigurationProperties("RedirectionMessage").then(function (response) {                              
+                              if (response != null && response.data != null) {
+                                  $scope.showRedirectionMessage = true;
+                                  $rootScope.loaded = true;
+                                  $('#VerbiageDiv').text(response.data);
+                                  var newWin = window.open(redirectURL, "_blank", "toolbar=no,scrollbars=yes,resizable=yes,menubar=no,status=no,titlebar=no", "replace");
+                                  if (!newWin || newWin.closed || typeof newWin.closed == 'undefined') {
+                                      alert("Popups are blocked for this site, please enable popups and try again.");                                      
+                                      $('#VerbiageDiv').text("Please close this window and try again after enabling pop-ups");
+                                  }
+                              }
+                          }).catch(function (e) {
+                             
+                          });
+                         
+                      } else {
+                          window.location.href = response.data.redirectURL;
+                      }
+                  }                      
                   else                                        
                        $rootScope.loaded = true;                   
                                       
-              }
-             
+              }             
           }
       }).catch(function (e) {
           $rootScope.loaded = true;
@@ -136,11 +158,21 @@
           if ($scope.selectedLocation.value == undefined || $scope.selectedLocation.value!=document.getElementById("gmDropDown").value)
               toastr["error"]('<div><span>' + $scope.locationError + '</span></div>')
           else {
-              clockGeneratorService.generateClock($scope.selectedLocation.location).then(function (response) {
+              clockGeneratorService.generateClock($scope.selectedLocation.location).then(function (response) {                  
                   if (response != null) {
 
                       if (response.data.redirectURL != null && response.data.redirectURL != "")
-                          window.location.href = response.data.redirectURL;
+                      {
+                          if (response.data.locationType != null && response.data.locationType.toUpperCase().trim() == "MAA")
+                          {
+                              var newWin = window.open(response.data.redirectURL, "_blank", "toolbar=no,scrollbars=yes,resizable=yes,menubar=no,status=no,titlebar=no", "replace");
+                              if (!newWin || newWin.closed || typeof newWin.closed == 'undefined') {
+                                  alert("Popups are blocked for this site, please enable popups and try again.");
+                              }
+                          }
+                          else
+                              window.location.href = response.data.redirectURL;
+                      }                          
                       else {
                           toastr["error"]('<div><span>' + $scope.errorMessage + '</span></div>')
                       }

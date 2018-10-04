@@ -4,19 +4,82 @@
 }
 <html>
 <head>
+    <style>
+        /*Redirection Note Style*/
+        .headerDivStyle {
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: #D93A2F;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .bodyStyle {
+            font-family: 'Montserrat-Regular';
+            background: #F3F3F4;
+            overflow-x: hidden;
+        }
+
+        .centerAllign {
+            text-align: center;
+        }
+    </style> 
 </head>
-<body>
+<body  class="bodyStyle">
+    <div id="redirectionDiv" style="display:none">
+        <div>
+            <div class="headerDivStyle">
+                <span>
+                    Redirection Note
+                </span>
+            </div>
+        </div>
+        <br />
+        <div class="centerAllign">
+            <div class="row">
+                <div class="col-md-12">
+                    <span id="VerbiageDiv"></span>
+                </div>
+            </div>
+        </div>
+    </div> 
     <input type="hidden" value="@ViewData["RedirectURL"]" id="redirectionURL" />
     <input type="hidden" value="@ViewData["LocationID"]" id="locationID" />
-    <script src="~/js/jquery.min.js"></script>
+    <input type="hidden" value="@ViewData["LocationType"]" id="locationType" />
+    <script src="~/js/jquery.min.js"></script>    
     <script>  
-        $(document).ready(function () {            
+        $(document).ready(function () {
+            
             var redirectionUrl = document.getElementById("redirectionURL").value;
             var locationID = document.getElementById("locationID").value;
+            var locationType = document.getElementById("locationType").value;
             if (redirectionUrl == "101")
                 window.location.href = "/Home/Error?location=" + locationID;
             else if (redirectionUrl != null && redirectionUrl != "")
-                window.location.href = redirectionUrl;
+            {
+                if (locationType != null && locationType.toUpperCase().trim() == "MAA") {
+                    var xmlHttp = new XMLHttpRequest();
+                    xmlHttp.onreadystatechange = function () {
+                        if (xmlHttp.status == 200) {
+                            $('#VerbiageDiv').text(xmlHttp.responseText);
+                            $('#redirectionDiv').css("display","block")                            
+                            var newWin = window.open(redirectionUrl, "_blank", "toolbar=no,scrollbars=yes,resizable=yes,menubar=no,status=no,titlebar=no", "replace");
+
+                            if (!newWin || newWin.closed || typeof newWin.closed == 'undefined') {
+                                alert("Popups are blocked for this site, please enable popups and try again.");
+                                $('#VerbiageDiv').text("Please close this window and try again after enabling pop-ups");
+                            }
+
+                        }
+                    }
+                    xmlHttp.open("GET", "/WebClockApi/GetConfigurationProperties?key=RedirectionMessage", false); // true for asynchronous
+                    xmlHttp.send();                                      
+                }
+                else {
+                    window.location.href = redirectionUrl;
+                }                
+            }                
             else
                 window.location.href = "/Admin/Index";
         });

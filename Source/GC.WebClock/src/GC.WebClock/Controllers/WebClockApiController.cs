@@ -28,7 +28,7 @@ namespace GC.WebClock.Controllers
             try
             {
                 UserInfo userInfo = new UserInfo(_context, HttpContext, User);
-                bool isAdmin = userInfo.isAdmin();
+                bool isAdmin = userInfo.isAdmin();              
                 if(isAdmin) //If user is admin, show admin panel to user by setting is admin property to true
                 {
                     ClockURL dto = new ClockURL();
@@ -43,7 +43,7 @@ namespace GC.WebClock.Controllers
                     var userDetails = userInfo.GetUserInfo();
                     CustomLogging.InfoLog("UserInfo details: empID=" + userDetails.empID + "; locationID=" + userDetails.locationID +
                         "; jobCode=" + userDetails.jobCode + "; dept=" + userDetails.dept);
-                    locationID = userDetails.locationID;                    
+                    locationID = userDetails.locationID;                   
                     //IF location is not recieived from user info, try to find it from user agent string
                     if (locationID == "0" || locationID == null)
                     {
@@ -161,7 +161,7 @@ namespace GC.WebClock.Controllers
             {
                 ADLocationsModel storeLocations = null;
                 StoreInfo storeInfo = new StoreInfo(_context, HttpContext, User);
-                storeLocations = storeInfo.GetAllStatesFromStoreInfo("all");
+                storeLocations = storeInfo.GetAllStatesFromStoreInfo("all");                
                 var locations = dbService.GetLocationsFromClocksList(storeLocations);
                 var result = Json(locations);
                 return result;              
@@ -192,12 +192,12 @@ namespace GC.WebClock.Controllers
         [HttpGet]
         [Route("WebClockApi/UpdateClock")]
         [Authorize]
-        public ActionResult UpdateClock(int clockId, string location, string clockName,string securityCode)
+        public ActionResult UpdateClock(int clockId, string location, string clockName,string securityCode, string locationType)
         {
             try
             {                
                 string encodedSecurityCode = Util.GetEncodedSecurityCode(securityCode);
-                bool isUpdated = dbService.UpdateClock(clockId, location,clockName, encodedSecurityCode);
+                bool isUpdated = dbService.UpdateClock(clockId, location,clockName, encodedSecurityCode, locationType);
                 return Json(isUpdated);
             }
             catch (Exception ex)
@@ -219,7 +219,7 @@ namespace GC.WebClock.Controllers
                 string clockName = clockType.ToLower() + location;
                 string securityCode = securityPrefix.ToUpper() + location.ToUpper();
                 var encodedSecurityCode = String.IsNullOrEmpty(securityCode) ? "" : Util.GetEncodedSecurityCode(securityCode);               
-                bool isAdded = dbService.AddClock(location, clockName, locationName, encodedSecurityCode,"Standard");
+                bool isAdded = dbService.AddClock(location, clockName, locationName, encodedSecurityCode,"Standard", locType);
                 return Json(isAdded);
             }
             catch (Exception ex)
@@ -263,13 +263,13 @@ namespace GC.WebClock.Controllers
         [HttpGet]
         [Route("WebClockApi/AddExceptionClock")]
         [Authorize]
-        public ActionResult AddExceptionClock(string location, string clockName, string locationName, string securityCode)
+        public ActionResult AddExceptionClock(string location, string clockName, string locationName, string securityCode,string locationType)
         {
             try
             {
                 var encodedSecurityCode =  Util.GetEncodedSecurityCode(securityCode);
                 location = location.Trim();
-                bool isAdded = dbService.AddClock(location, clockName, locationName, encodedSecurityCode,"Exception");
+                bool isAdded = dbService.AddClock(location, clockName, locationName, encodedSecurityCode,"Exception", locationType);
                 return Json(isAdded);
             }
             catch (Exception ex)

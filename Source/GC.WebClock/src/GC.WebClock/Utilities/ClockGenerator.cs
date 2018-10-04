@@ -41,7 +41,8 @@ namespace GC.WebClock.Utilities
                
                 // getting device name and encoded security code form Database to generate URL's
                 string clockName =  dbService.GetClockNameFromLocationId(locationID);                 
-                string encodedSecurityCode = dbService.GetEncodedSecurityCode(locationID);               
+                string encodedSecurityCode = dbService.GetEncodedSecurityCode(locationID);
+                string locationType = dbService.GetLocationType(locationID);
                 var securityCode = Util.DecodeSecurityCode(encodedSecurityCode);
 
                 //generating SilverLight URL
@@ -59,6 +60,7 @@ namespace GC.WebClock.Utilities
                 clockDTO.EncodedSecurityCode = encodedSecurityCode;
                 clockDTO.SilverLighClockURL = silverLightURL;
                 clockDTO.HTMLClockURL = HTMLClockURL;
+                clockDTO.LocationType = locationType;
                 return clockDTO;
             }catch(Exception ex)
             {
@@ -76,11 +78,12 @@ namespace GC.WebClock.Utilities
         {
             try
             {
-                string clockName = "", securityCode = "", encodedSecurityCode = "";               
+                string clockName = "", securityCode = "", encodedSecurityCode = "", locationType="";               
 
-                //getiing clockName and Encoded sercuirty code from Database
+                //getting clockName and Encoded sercuirty code from Database
                 clockName =  dbService.GetClockNameFromLocationId(locationID) ;
                 encodedSecurityCode = dbService.GetEncodedSecurityCode(locationID);
+                locationType = dbService.GetLocationType(locationID);
                 encodedSecurityCode = String.IsNullOrEmpty(encodedSecurityCode) ? Util.GetEncodedSecurityCode(clockName) : encodedSecurityCode;
                 securityCode = Util.DecodeSecurityCode(encodedSecurityCode);
 
@@ -99,6 +102,7 @@ namespace GC.WebClock.Utilities
                 clockDTO.EncodedSecurityCode = encodedSecurityCode;
                 clockDTO.SilverLighClockURL = silverLightURL;
                 clockDTO.HTMLClockURL = HTMLClockURL;
+                clockDTO.LocationType = locationType;
 
                 return clockDTO;
             }

@@ -16,20 +16,38 @@
     <meta http-equiv="Content-Script-Type" content="text/javascript" />
     <meta http-equiv="Content-Style-Type" content="text/css" />        
     <title>..:::: Web Clock ::::..</title>          
-    <link href="~/css/custom.css" rel="stylesheet" />
+    <link href="~/css/custom.css?v=@versionNumber" rel="stylesheet" />
     <link href="~/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/css/font-awesome.css" rel="stylesheet" />
     <link href="~/css/style.css" rel="stylesheet" />
     <link href="~/css/toastr.css" rel="stylesheet" />
-    <link href="~/css/jquery.dataTables.min.css" rel="stylesheet" />   
+    <link href="~/css/jquery.dataTables.min.css" rel="stylesheet" /> 
+     
 </head>
-<body ng-app="App"  ng-controller="AppCtrl" >  
+<body ng-app="App"  ng-controller="AppCtrl" >   
+    <div class="bodyStyle" ng-show="showRedirectionMessage" ng-cloak>
+        <div>
+            <div class="headerDivStyle">
+                <span>
+                    Redirection Note
+                </span>
+            </div>
+        </div>
+        <br />
+        <div class="centerAllign">
+            <div class="row">
+                <div class="col-md-12">
+                    <span id="VerbiageDiv"></span>
+                </div>
+            </div>
+        </div>
+    </div>  
     <div ng-hide="loaded">
         <div class="center-allign">
             <div class="startupLoader" style="float:left"></div><span style="font-size:25px">&nbsp;Loading Web Clock...</span>
         </div>
     </div>
-    <div ng-show="loaded"  ng-cloak>
+    <div ng-show="loaded && !showRedirectionMessage"  ng-cloak>
         <div id="wrapper">
             <nav class="navbar-default navbar-static-top" role="navigation">
                 <div class="navbar-header">
@@ -82,7 +100,7 @@
     <script src="~/js/angular.min.js"></script>
     <script src="~/js/ui-bootstrap-tpls.min.js"></script>
     <script src="~/js/angular-route.min.js"></script>
-    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/jquery.min.js"></script>    
     <script src="~/js/jquery.slimscroll.min.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
     <script src="~/js/custom.js"></script>

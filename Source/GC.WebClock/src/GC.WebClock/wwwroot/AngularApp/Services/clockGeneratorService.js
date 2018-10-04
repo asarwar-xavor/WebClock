@@ -23,8 +23,8 @@
             deleteClock: function (clockId) {
                 return $http.get('/WebClockApi/DeleteClock', { params: { clockId: clockId } });
             },
-            updateClock: function (clockId, location, clockName, securityCode) {
-                return $http.get('/WebClockApi/UpdateClock', { params: { clockId: clockId, location: location, clockName: clockName, securityCode: securityCode } });
+            updateClock: function (clockId, location, clockName, securityCode, locationType) {
+                return $http.get('/WebClockApi/UpdateClock', { params: { clockId: clockId, location: location, clockName: clockName, securityCode: securityCode, locationType: locationType } });
             },
             addClock: function (location,locationName,locType) {
                 return $http.get('/WebClockApi/AddClock', { params: { location: location, locationName: locationName, locType: locType } });
@@ -35,8 +35,8 @@
             getConfigurationProperties: function (key) {
                 return $http.get('/WebClockApi/GetConfigurationProperties', { params: { key: key } });
             },
-            addExceptionClock: function (location, clockName, locationName,securityCode) {
-                return $http.get('/WebClockApi/AddExceptionClock', { params: { location: location, clockName: clockName, locationName: locationName, securityCode: securityCode } });
+            addExceptionClock: function (location, clockName, locationName,securityCode,locationType) {
+                return $http.get('/WebClockApi/AddExceptionClock', { params: { location: location, clockName: clockName, locationName: locationName, securityCode: securityCode, locationType: locationType } });
             }
         }
 

@@ -26,6 +26,8 @@
             $scope.updatedLocation = "";
             $scope.updatedClockName = "";
             $scope.updatedLocationName = "";
+            $scope.updateLocationType = "GC";
+            $scope.updateClockType = "";
             //View variables
             $scope.viewLocationNumber = "";
             $scope.viewLocationName = "";
@@ -62,19 +64,21 @@
                 }               
             }
             //Function to switch to edit mode from table
-            $scope.displayEditMode = function (clockObj) {              
+            $scope.displayEditMode = function (clockObj) {                
                 $scope.mode = 'Edit';
                 $scope.selectedLocationId = clockObj.clockId;         
                 $scope.updatedLocation = clockObj.location;
                 $scope.updatedClockName = clockObj.clockName;
                 $scope.updatedLocationName = clockObj.locationName;
                 $scope.updatedSecurityCode = clockObj.securityCode;
+                $scope.updateLocationType = clockObj.locationType;
+                $scope.updateClockType = clockObj.clockType;
             }
 
             //Function to update location details in database
-            $scope.updateLocation = function (clockId, location, clockName) {
+            $scope.updateLocation = function (clockId, location, clockName,updateLocationType) {
                 $scope.isUpdated = false;
-                clockGeneratorService.updateClock(clockId, location, clockName, $scope.updatedSecurityCode).then(function (response) {
+                clockGeneratorService.updateClock(clockId, location, clockName, $scope.updatedSecurityCode,updateLocationType).then(function (response) {
                     if (response != null) {
                         $scope.isUpdated = true;
                     }

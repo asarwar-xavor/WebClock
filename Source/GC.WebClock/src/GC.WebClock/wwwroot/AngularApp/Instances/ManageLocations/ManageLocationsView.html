@@ -35,7 +35,7 @@
         </div>
     </div>
     <div class="col-md-12" ng-show="mode=='Edit'">  
-        <form ng-submit="updateLocation(selectedLocationId,updatedLocation,updatedClockName)">
+        <form ng-submit="updateLocation(selectedLocationId,updatedLocation,updatedClockName,updateLocationType)">
             <div class="row">
                 <div class="col-md-12"></div>
             </div>
@@ -64,6 +64,16 @@
                 <div class="col-md-2"><span>*Security Code:</span></div>
                 <div class="col-md-3"><input class="fullWidth" type="text" ng-model="updatedSecurityCode" required /></div>
                 <div class="col-md-3 text-info"><span>{{securityCodeMessage}}</span></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"><span>*Company:</span></div>
+                <div class="col-md-9">
+                    <span><input type="radio" ng-model="updateLocationType" name="updateLocationType" value="GC" />GC</span>&nbsp;&nbsp;
+                    <span><input type="radio" ng-model="updateLocationType" name="updateLocationType" value="MAA" />M&A</span>
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-12"></div>
@@ -106,15 +116,15 @@
                 <div class="col-md-12"></div>
             </div>       
         <div class="row">
-            <div class="col-md-2"><span>Silverlight Clock URL:</span></div>
-            <div class="col-md-10"><span>{{silverLighClockURL}}</span></div>
+            <div class="col-md-2"><span>Silverlight Clock URL:</span></div>          
+            <div class="col-md-10"><a href="{{silverLighClockURL}}" target="_blank">{{silverLighClockURL}}</a></div>
         </div>
         <div class="row">
             <div class="col-md-12"></div>
         </div>
         <div class="row">
-            <div class="col-md-2"><span>HTML Clock URL:</span></div>
-            <div class="col-md-10"><span>{{HTMLClockURL}}</span></div>
+            <div class="col-md-2"><span>HTML Clock URL:</span></div>        
+            <div class="col-md-10"><a href="{{HTMLClockURL}}" target="_blank">{{HTMLClockURL}}</a></div>
         </div>
         <div class="row">
             <div class="col-md-12"></div>

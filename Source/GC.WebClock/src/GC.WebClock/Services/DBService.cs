@@ -126,7 +126,24 @@ namespace GC.WebClock.Services
                 return "";
             }
         }
-       
+        public string GetLocationType(string LocationId)
+        {
+            try
+            {
+                var result = dbContext.ClocksList.Where(cl => cl.IsActive && cl.Location.Trim().ToUpper().TrimStart('0') == LocationId.Trim().ToUpper().TrimStart('0')).ToList();
+                if (result != null && result.Count() > 0)
+                {
+                    return result[0].LocationType;
+                }
+                return "";
+            }
+            catch (Exception ex)
+            {
+                CustomLogging.ErrorLog(ex);
+                return "";
+            }
+        }
+
         public dynamic GetLocationsFromClocksList(ADLocationsModel storeLocations)
         {
             try
@@ -173,7 +190,7 @@ namespace GC.WebClock.Services
                 return false;
             }
         }
-        public dynamic UpdateClock(int clockId, string location, string clockName,string encodedSecurityCode)
+        public dynamic UpdateClock(int clockId, string location, string clockName,string encodedSecurityCode, string locationType)
         {
             try
             {
@@ -181,6 +198,7 @@ namespace GC.WebClock.Services
                 clockObj.Location = String.IsNullOrEmpty(location) ? clockObj.Location : location.Trim();
                 clockObj.ClockName = String.IsNullOrEmpty(clockName) ? clockObj.ClockName : clockName.Trim();
                 clockObj.EncodedSecurityCode = String.IsNullOrEmpty(encodedSecurityCode) ? clockObj.EncodedSecurityCode : encodedSecurityCode.Trim();
+                clockObj.LocationType = String.IsNullOrEmpty(locationType) ? clockObj.LocationType : locationType;
                 dbContext.SaveChanges();
                 return true;
             }
@@ -190,7 +208,7 @@ namespace GC.WebClock.Services
                 return false;
             }
         }
-        public dynamic AddClock(string location, string clockName,string locationName, string encodedSecurityCode,string clockType)
+        public dynamic AddClock(string location, string clockName,string locationName, string encodedSecurityCode,string clockType, string locType)
         {
             try
             {
@@ -201,7 +219,8 @@ namespace GC.WebClock.Services
                 ClocksList addObj = new ClocksList();
                 addObj.Location = location.Trim();
                 addObj.ClockName = clockName.Trim();
-                addObj.EncodedSecurityCode = encodedSecurityCode.Trim();               
+                addObj.EncodedSecurityCode = encodedSecurityCode.Trim();
+                addObj.LocationType = locType;               
                 addObj.ClockType = clockType.Trim();
                 dbContext.ClocksList.Add(addObj);
                 dbContext.SaveChanges();

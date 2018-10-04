@@ -33,6 +33,7 @@ namespace GC.WebClock.Controllers
             string locationID = "";
             ViewData["RedirectURL"] = "";
             ViewData["LocationID"] = "";
+            ViewData["LocationType"] = "";
             var userAgent = Request.Headers["User-Agent"].ToString();
             CustomLogging.InfoLog("User-Agent String = " + userAgent);
             locationID = String.IsNullOrEmpty(location)? Util.GetStoreFromUserAgent(userAgent):location;
@@ -56,6 +57,7 @@ namespace GC.WebClock.Controllers
                     else if (redirectionType.ToUpper() == "HTML")
                         clockDTO.RedirectURL = clockDTO.HTMLClockURL;
                     ViewData["RedirectURL"] = clockDTO.RedirectURL;
+                    ViewData["LocationType"] = clockDTO.LocationType;
                 }               
             }
             return View();
@@ -86,6 +88,7 @@ namespace GC.WebClock.Controllers
         public IActionResult ServerInfo()
         {            
             return View();
-        }     
+        }   
+               
     }
 }

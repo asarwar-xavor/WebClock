@@ -23,6 +23,7 @@ namespace GC.WebClock.Models
                 entity.Property(e => e.ClockName).HasMaxLength(500);
                // entity.Property(e => e.LocationName).HasMaxLength(500);
                 entity.Property(e => e.Location).HasMaxLength(500);
+                entity.Property(e => e.LocationType).HasMaxLength(50);
                 entity.Property(e => e.ClockType).HasMaxLength(50);
                 entity.Property(e => e.EncodedSecurityCode).HasMaxLength(500);
                 entity.Property(e => e.CreatedBy).HasMaxLength(50);

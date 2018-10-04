@@ -9,6 +9,7 @@ namespace GC.WebClock.Models
         public string ClockName { get; set; }      
         public string EncodedSecurityCode { get; set; }
         public string Location { get; set; }
+        public string LocationType { get; set; }
         public string ClockType { get; set; }
        // public string LocationName { get; set; }
         public bool IsActive { get; set; }
