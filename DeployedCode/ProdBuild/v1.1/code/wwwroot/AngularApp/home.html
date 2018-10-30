@@ -1,0 +1,40 @@
+﻿<!--content-->
+<div class="col-md-12" ng-show="!isAdmin">
+    <form ng-submit="generateClock()">
+        <div class="row">
+            <div class="col-md-12"></div>
+        </div>
+
+        <div class="row" ng-if="displayDropDown">
+            <div class="col-md-2"><span>*Location:</span></div>
+            <div class="col-md-3">
+                <typeahead-dropdown ng-model='selectedLocation' options='locations' ng-required="true" config='config'></typeahead-dropdown>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-danger" >Submit</button>
+            </div>
+        </div>
+    </form>
+</div> 
+<div class="col-md-12" ng-show="isAdmin">
+    <div class="row">
+        <div class="col-md-12"><span>{{welcomeMessage}}</span></div>
+    </div>
+</div>
+<!--//content-->
+<script>   
+    // Collapsing side menu
+    collapseMenuForHomePage();
+
+    $(".navbar-brand").click(function () {
+        collapseMenuForHomePage();
+    })
+    $(".banner ul li a").click(function () {
+        collapseMenuForHomePage();
+    })
+</script>

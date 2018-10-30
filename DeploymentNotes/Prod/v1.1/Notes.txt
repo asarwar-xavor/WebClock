@@ -1,0 +1,42 @@
+Deployment notes for v.1.1
+
+************************************************************************
+NOTE: Use QA,STAGE or PROD urls or machine according to the deployment type
+************************************************************************
+
+
+[PROD-WFEs] = SPPRDWEB01, SPPRDWEB02,SPPRDWEB03
+[CodeToDeploy] = $\GC_WebClock\DeployedCode\ProdBuild\v1.1\code
+[ScriptToDeploy] = $\GC_WebClock\DeployedCode\ProdBuild\v1.1\Scripts
+[CodeToRollback] = NONE
+[InstallPath] = C:\inetpub\wwwroot\GC_WebClock
+
+
+
+
+********************************************************************************************
+Any Backup required(steps):
+********************************************************************************************
+
+Please take complete backup of GC_WebClock and Database for RollBack.
+
+**********************************************************************
+Deployment Steps
+**********************************************************************
+
+1) Log into the WFE server(s) [PROD-WFEs] using Remote Desktop Connection
+2) Deploy [CodeToDeploy] at [InstallPath]
+3) Deploy [ScriptToDeploy] at DB Server
+4) Browser site and verify its working.
+
+
+***************************************
+Steps if need restart server or service:
+***************************************
+
+NONE 
+****************************************************
+RollBack Steps:
+****************************************************
+
+NONE

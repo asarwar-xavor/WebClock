@@ -1,0 +1,1 @@
+INSERT INTO GC_WebClock.dbo.ConfigurationProperties (PropertyName,PropertyValue,Description,IsActive) values ('RedirectionMessage','You have been redirected to Day Force Clock. Please close this window','Redirection Note','1')
